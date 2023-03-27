@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+F:\Programming Languages\Java\IITS Java Course\Day 10\Student MS\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+760091825.index
+887693221.index
+742519227.index

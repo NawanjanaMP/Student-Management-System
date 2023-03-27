@@ -1,0 +1,441 @@
+package system;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JRadioButton;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.text.MessageFormat;
+import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
+
+public class StudentSecondPage {
+
+	private JFrame frame;
+	private JTextField txtStudentID;
+	private JTextField txtFirstName;
+	private JTextField txtLastName;
+	private JTextField txtExamNo;
+	private JTextField txtDoB;
+	private JTextField txtMaths;
+	private JTextField txtScience;
+	private JTextField txtSinhala;
+	private JTextField txtEnglish;
+	private JTextField txtBuddhism;
+	private JTextField txtHistory;
+	private JTextField txtTotalMarks;
+	private JTextField txtAverage;
+	private JTextField txtRanking;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					StudentSecondPage window = new StudentSecondPage();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public StudentSecondPage() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(255, 248, 220));
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(new Color(255, 165, 0), 6, true));
+		panel.setBackground(new Color(127, 255, 212));
+		panel.setBounds(10, 10, 648, 430);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Student ID:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel.setBounds(21, 10, 146, 34);
+		panel.add(lblNewLabel);
+		
+		txtStudentID = new JTextField();
+		txtStudentID.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtStudentID.setBounds(177, 10, 145, 34);
+		panel.add(txtStudentID);
+		txtStudentID.setColumns(10);
+		
+		JLabel lblFirstName = new JLabel("First Name:");
+		lblFirstName.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFirstName.setBounds(21, 54, 146, 34);
+		panel.add(lblFirstName);
+		
+		txtFirstName = new JTextField();
+		txtFirstName.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtFirstName.setColumns(10);
+		txtFirstName.setBounds(177, 54, 145, 34);
+		panel.add(txtFirstName);
+		
+		JLabel lblFirstName_1 = new JLabel("Last Name:");
+		lblFirstName_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFirstName_1.setBounds(21, 97, 146, 34);
+		panel.add(lblFirstName_1);
+		
+		txtLastName = new JTextField();
+		txtLastName.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtLastName.setColumns(10);
+		txtLastName.setBounds(177, 97, 145, 34);
+		panel.add(txtLastName);
+		
+		JLabel lblFirstName_1_1 = new JLabel("Course Code:");
+		lblFirstName_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFirstName_1_1.setBounds(21, 141, 146, 34);
+		panel.add(lblFirstName_1_1);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "IT0101", "CS0105", "IT0145", "IT0450"}));
+		comboBox.setBounds(177, 141, 145, 32);
+		panel.add(comboBox);
+		
+		JLabel lblFirstName_1_2 = new JLabel("Exam No:");
+		lblFirstName_1_2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFirstName_1_2.setBounds(21, 185, 146, 34);
+		panel.add(lblFirstName_1_2);
+		
+		txtExamNo = new JTextField();
+		txtExamNo.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtExamNo.setColumns(10);
+		txtExamNo.setBounds(177, 185, 145, 34);
+		panel.add(txtExamNo);
+		
+		JLabel lblFirstName_1_2_1 = new JLabel("Gender:");
+		lblFirstName_1_2_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFirstName_1_2_1.setBounds(21, 229, 146, 34);
+		panel.add(lblFirstName_1_2_1);
+		
+		JLabel lblFirstName_1_2_1_1 = new JLabel("DoB:");
+		lblFirstName_1_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFirstName_1_2_1_1.setBounds(21, 273, 146, 34);
+		panel.add(lblFirstName_1_2_1_1);
+		
+		txtDoB = new JTextField();
+		txtDoB.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtDoB.setColumns(10);
+		txtDoB.setBounds(177, 273, 145, 34);
+		panel.add(txtDoB);
+		
+		JLabel lblFirstName_1_2_1_1_1 = new JLabel("Address:");
+		lblFirstName_1_2_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblFirstName_1_2_1_1_1.setBounds(21, 317, 146, 34);
+		panel.add(lblFirstName_1_2_1_1_1);
+		
+		JTextArea txtAddress = new JTextArea();
+		txtAddress.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtAddress.setBounds(177, 317, 145, 92);
+		panel.add(txtAddress);
+		
+		JRadioButton rbtnFemale = new JRadioButton("Female");
+		buttonGroup.add(rbtnFemale);
+		rbtnFemale.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		rbtnFemale.setBounds(249, 225, 73, 34);
+		panel.add(rbtnFemale);
+		
+		JRadioButton rbtnMale = new JRadioButton("Male");
+		buttonGroup.add(rbtnMale);
+		rbtnMale.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		rbtnMale.setBounds(177, 225, 73, 34);
+		panel.add(rbtnMale);
+		
+		JLabel lblMathematics = new JLabel("Mathematics:");
+		lblMathematics.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblMathematics.setBounds(383, 10, 146, 34);
+		panel.add(lblMathematics);
+		
+		txtMaths = new JTextField();
+		txtMaths.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtMaths.setColumns(10);
+		txtMaths.setBounds(529, 10, 98, 34);
+		panel.add(txtMaths);
+		
+		JLabel lblScience = new JLabel("Science:");
+		lblScience.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblScience.setBounds(383, 54, 146, 34);
+		panel.add(lblScience);
+		
+		txtScience = new JTextField();
+		txtScience.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtScience.setColumns(10);
+		txtScience.setBounds(529, 54, 98, 34);
+		panel.add(txtScience);
+		
+		JLabel lblScience_1 = new JLabel("Sinhala:");
+		lblScience_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblScience_1.setBounds(383, 97, 146, 34);
+		panel.add(lblScience_1);
+		
+		txtSinhala = new JTextField();
+		txtSinhala.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtSinhala.setColumns(10);
+		txtSinhala.setBounds(529, 97, 98, 34);
+		panel.add(txtSinhala);
+		
+		JLabel lblScience_1_1 = new JLabel("English:");
+		lblScience_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblScience_1_1.setBounds(383, 141, 146, 34);
+		panel.add(lblScience_1_1);
+		
+		txtEnglish = new JTextField();
+		txtEnglish.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtEnglish.setColumns(10);
+		txtEnglish.setBounds(529, 141, 98, 34);
+		panel.add(txtEnglish);
+		
+		JLabel lblMathematics_1 = new JLabel("Buddhism:");
+		lblMathematics_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblMathematics_1.setBounds(383, 186, 146, 34);
+		panel.add(lblMathematics_1);
+		
+		txtBuddhism = new JTextField();
+		txtBuddhism.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtBuddhism.setColumns(10);
+		txtBuddhism.setBounds(529, 186, 98, 34);
+		panel.add(txtBuddhism);
+		
+		txtHistory = new JTextField();
+		txtHistory.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtHistory.setColumns(10);
+		txtHistory.setBounds(529, 230, 98, 34);
+		panel.add(txtHistory);
+		
+		JLabel lblScience_2 = new JLabel("History:");
+		lblScience_2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblScience_2.setBounds(383, 230, 146, 34);
+		panel.add(lblScience_2);
+		
+		JLabel lblScience_1_2 = new JLabel("Total Marks:");
+		lblScience_1_2.setForeground(new Color(255, 0, 0));
+		lblScience_1_2.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblScience_1_2.setBounds(383, 287, 146, 34);
+		panel.add(lblScience_1_2);
+		
+		txtTotalMarks = new JTextField();
+		txtTotalMarks.setForeground(new Color(255, 0, 0));
+		txtTotalMarks.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtTotalMarks.setColumns(10);
+		txtTotalMarks.setBounds(529, 287, 98, 34);
+		panel.add(txtTotalMarks);
+		
+		JLabel lblScience_1_1_1 = new JLabel("Average:");
+		lblScience_1_1_1.setForeground(new Color(255, 0, 0));
+		lblScience_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblScience_1_1_1.setBounds(383, 331, 146, 34);
+		panel.add(lblScience_1_1_1);
+		
+		txtAverage = new JTextField();
+		txtAverage.setForeground(new Color(255, 0, 0));
+		txtAverage.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtAverage.setColumns(10);
+		txtAverage.setBounds(529, 331, 98, 34);
+		panel.add(txtAverage);
+		
+		JLabel lblScience_1_1_1_1 = new JLabel("Ranking:");
+		lblScience_1_1_1_1.setForeground(new Color(255, 0, 0));
+		lblScience_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblScience_1_1_1_1.setBounds(383, 375, 146, 34);
+		panel.add(lblScience_1_1_1_1);
+		
+		txtRanking = new JTextField();
+		txtRanking.setForeground(new Color(255, 0, 0));
+		txtRanking.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		txtRanking.setColumns(10);
+		txtRanking.setBounds(529, 375, 98, 34);
+		panel.add(txtRanking);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new LineBorder(new Color(255, 165, 0), 6, true));
+		panel_1.setBackground(new Color(127, 255, 212));
+		panel_1.setBounds(668, 10, 308, 430);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(null);
+		
+		JTextArea txtTranscript = new JTextArea();
+		txtTranscript.setBounds(21, 24, 266, 384);
+		panel_1.add(txtTranscript);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new LineBorder(new Color(255, 165, 0), 6, true));
+		panel_2.setBackground(new Color(127, 255, 212));
+		panel_2.setBounds(10, 450, 966, 103);
+		frame.getContentPane().add(panel_2);
+		panel_2.setLayout(null);
+		
+		JButton btnResult = new JButton("Result");
+		btnResult.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double [] R = new double[14];
+				R[0] = Double.parseDouble(txtMaths.getText());
+				R[1] = Double.parseDouble(txtScience.getText());
+				R[2] = Double.parseDouble(txtSinhala.getText());
+				R[3] = Double.parseDouble(txtEnglish.getText());
+				R[4] = Double.parseDouble(txtBuddhism.getText());
+				R[5] = Double.parseDouble(txtHistory.getText());
+				
+				//Total Marks
+				R[6] = R[0] + R[1] + R[2] + R[3] + R[4] + R[5]; 
+				//Average		
+				R[7] = R[6] / 6;
+				
+				String Average = String.format("%.0f", R[7]);
+				txtAverage.setText(Average);
+				
+				String TotalMarks = String.format("%.0f", R[6]);
+				txtTotalMarks.setText(TotalMarks);
+				
+				if(R[7]>=80) {
+					txtRanking.setText("1st class");
+				}
+				if(R[7]>=75 && R[7]<80) {
+					txtRanking.setText("2nd upper class ");
+				}
+				if(R[7]>=70 && R[7]<75) {
+					txtRanking.setText("2nd lower class ");
+				}
+				if(R[7]<70) {
+					txtRanking.setText("Not obtained a class ");
+				}
+				
+			
+			}
+		});
+		btnResult.setBackground(new Color(255, 192, 203));
+		btnResult.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnResult.setBounds(21, 21, 158, 60);
+		panel_2.add(btnResult);
+		
+		JButton btnTranscript = new JButton("Transcript");
+		btnTranscript.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtTranscript.setText("");
+				txtTranscript.append("Student Result Recording System \n"
+						+ "===============\n"
+						+ "Student ID: \t\t " + txtStudentID.getText()
+						+ "\n First Name: \t\t " + txtFirstName.getText()
+						+ "\n Last Name: \t\t " + txtLastName.getText()
+						+ "\n Course Code: \t\t " + comboBox.getSelectedItem()
+						+ "\n Exam No: \t\t " + txtExamNo.getText()
+						//+ "\n Gender: \t\t " + rbtnMale.getText()
+						//+ "\n Gender: \t\t " + rbtnFemale.getText()
+						+ "\n Date of Birth: \t\t " + txtDoB.getText()
+						+ "\n Address: \t\t " + txtAddress.getText()
+						+ "\n Mathematics: \t\t " + txtMaths.getText()
+						+ "\n Science: \t\t " + txtScience.getText()
+						+ "\n Sinhala: \t\t " + txtSinhala.getText()
+						+ "\n English: \t\t " + txtEnglish.getText()
+						+ "\n Buddhism: \t\t " + txtBuddhism.getText()
+						+ "\n History: \t\t " + txtHistory.getText()
+						
+						+ "\n\n Total Marks: \t\t " + txtTotalMarks.getText()
+						+ "\n Average: \t\t " + txtAverage.getText()
+						+ "\n Ranking: \t\t " + txtRanking.getText()
+							
+						);
+				
+			}
+		});
+		btnTranscript.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnTranscript.setBackground(new Color(255, 192, 203));
+		btnTranscript.setBounds(214, 21, 158, 60);
+		panel_2.add(btnTranscript);
+		
+		JButton btnPrint = new JButton("Print");
+		btnPrint.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MessageFormat header = new MessageFormat("Printing in progress");
+				MessageFormat footer = new MessageFormat("Page{0,number,integer}");
+				
+				try{txtTranscript.print();
+			}catch(java.awt.print.PrinterException ev) 
+				{System.err.format("No printer found", ev.getMessage());
+				}
+			}
+		});
+		btnPrint.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnPrint.setBackground(new Color(255, 192, 203));
+		btnPrint.setBounds(414, 21, 164, 60);
+		panel_2.add(btnPrint);
+		
+		JButton btnReset = new JButton("Reset");
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtStudentID.setText(null);
+				txtFirstName.setText(null);
+				txtLastName.setText(null);
+				comboBox.setSelectedIndex(0);
+				txtExamNo.setText(null);
+				rbtnMale.setSelected(false);
+				rbtnFemale.setSelected(false);
+				txtDoB.setText(null);
+				txtAddress.setText(null);
+				txtMaths.setText(null);
+				txtScience.setText(null);
+				txtSinhala.setText(null);
+				txtEnglish.setText(null);
+				txtBuddhism.setText(null);
+				txtHistory.setText(null);
+				txtTotalMarks.setText(null);
+				txtAverage.setText(null);
+				txtRanking.setText(null);
+				txtTranscript.setText(null);
+
+				
+				
+			}
+		});
+		btnReset.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnReset.setBackground(new Color(255, 192, 203));
+		btnReset.setBounds(616, 21, 148, 60);
+		panel_2.add(btnReset);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFrame frmLoginSystem = new JFrame("Exit");
+				if(JOptionPane.showConfirmDialog(frmLoginSystem, "Confirm if you want to exit",
+						"Student Management System",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION) {
+					System.exit(0);	
+				}
+			}
+		});
+		btnExit.setFont(new Font("Tahoma", Font.BOLD, 20));
+		btnExit.setBackground(new Color(255, 192, 203));
+		btnExit.setBounds(796, 21, 148, 60);
+		panel_2.add(btnExit);
+		frame.setBounds(100, 100, 1000, 600);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
