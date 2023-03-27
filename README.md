@@ -4,6 +4,7 @@ This system supports to enter details of relevant students then calculate their 
 
 # User guidelines
 Run the jar file.
-User name & password for the student management system
+
+User name & password for the student management system.
     User name - user
     Password - abc123
